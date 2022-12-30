@@ -1,0 +1,33 @@
+**Initialize app nodejs
+npm init -y
+npm install --global yarn
+yarn add express mongoose dotenv nodemon
+
+express: nodejs framework that create rest api on server
+mongoose: mongodb, create documents, CURD operations
+dotenv: labrary that hide out secret keys, crucial values (nobody can reach it)
+nodemon: allows us to refresh our app for every changes (meaning when we save new change, app auto refresh and run)
+
+create server MongoDB database
+connect MongDB with our app 
+
+create env to hide secret key (which is our link to MongDB)
+
+create rest API
+- create router
+
+install postman
+- app to test rest api
+
+Encrypt password
+- use CryptoJS - AES
+yarn add crypto-js
+
+Add JWT (json web tokens) for more secure (CRUD verify)
+yarn add jsonwebtoken
+
+Create Stripe account
+- API key: publishable key for front-end side and secret key for in our server side
+ - install stripe: yarn add stripe
+
+yarn add cors

@@ -1,0 +1,31 @@
+npx create-react-app .
+npm install yarn
+npm install @material-ui/icons @material-ui/core recharts
+
+1/ Create top bar
+2/ Create side bar
+    - List of pages
+3/ Create pages
+    - Home page
+4/ Features info (Home page)
+5/ Chart (Home page)
+6/ Widget Small and Large (1:2 Home page)
+7/ Create UserList page
+
+- Link to each page url
+npm install react-router-dom 
+
+- dataGrid: table components from material-ui
+npm install @material-ui
+
+- onClick function delete
+
+8/ Create User page (Edit page of user)
+9/ Create newUser page
+10/ Create ProductList page
+11/ Create Product page (edit page of product)
+ - Add chart components into it
+12/ Create newProduct page
+
+LAST!!!!
+ - Link and Dom all pages together
