@@ -17,22 +17,44 @@
 
 .topLeft {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  width: 40px;
-  height: 40px;
+.image {
+  height: 70px;
+  width: 70px;
 }
 
 .logo {
   font-weight: bold;
   font-size: 30px;
   color: #5c5f58;
-  cursor: pointer;
-  margin-left: 15px;
+  margin-left: 20px;
+  text-align: center;
 }
 
 .topRight {
   display: flex;
   align-items: center;
+}
+
+.userName {
+  font-size: 20px;
+  margin-left: 25px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.logout {
+  margin: 0 15px;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 10px;
+  border-color: gray;
 }
 
 .topbarIconContainer {

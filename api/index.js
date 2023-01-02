@@ -38,6 +38,8 @@ app.use("/api/checkout", stripeRoute);
 
 // Run the app
 // Either PORT from env or PORT 5000
-app.listen(process.env.PORT || 3001, () => {
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
   console.log("Backend server is running!");
+  console.log(`Server Port: ${PORT}`);
 });

@@ -1,13 +1,16 @@
 import Chart from "../../components/chart/Chart";
 import FeaturedInfo from "../../components/featuredInfo/FeaturedInfo";
 import "./home.css";
-// import { userData } from "../../dummyData";
 import WidgetSm from "../../components/widgetSm/WidgetSm";
 import WidgetLg from "../../components/widgetLg/WidgetLg";
 import { useEffect, useMemo, useState } from "react";
 import { userRequest } from "../../requestMethods";
+import { useSelector } from "react-redux";
+import Login from "../login/Login";
 
 export default function Home() {
+  const user = useSelector((state) => state.user.currentUser);
+
   const [userStats, setUserStats] = useState([]);
 
   // Array incude months
@@ -47,17 +50,23 @@ export default function Home() {
 
   return (
     <div className="home">
-      <FeaturedInfo />
-      <Chart
-        data={userStats}
-        title="User Analytics"
-        grid
-        dataKey="Active User"
-      />
-      <div className="homeWidgets">
-        <WidgetSm />
-        <WidgetLg />
-      </div>
+      {user ? (
+        <>
+          <FeaturedInfo />
+          <Chart
+            data={userStats}
+            title="User Analytics"
+            grid
+            dataKey="Active User"
+          />
+          <div className="homeWidgets">
+            <WidgetSm />
+            <WidgetLg />
+          </div>
+        </>
+      ) : (
+        <Login />
+      )}
     </div>
   );
 }
